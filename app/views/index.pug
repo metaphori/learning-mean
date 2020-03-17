@@ -2,3 +2,42 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}.
+  p ciao
+  p
+    span Sometitle
+    i.fas.fa-star
+    i.fas.fa-star
+    span.badge.badge-pill.badge-warning.float-right MyBadge!!!
+    .row
+      .col-12.col-lg-9
+        .row
+          .col-12.col-md-6
+            .card.card-primary
+              .card-block
+                h2.card-title Opening hours
+                p.card-text Monday - Friday : 7:00am - 7:00pm
+          .col-12.col-md-6
+            .card.card-primary
+              .card-block
+                h2.card-title Opening hours 2
+                p.card-text Monday - Friday : 6:00am - 7:00pm
+  //- Declaration of mixin
+  mixin list(first,second)
+    ul
+      li= first
+      li= second
+  //- Use
+  +list('a','b')
+  //- Bad use does not fail: args will be undefined
+  +list(c)
+  //- Mixins can also take a block of Pug to act as the content
+  mixin m(x,y)
+    if block
+      .float-right
+        block
+    else
+      p No content
+  //- Use
+  +m
+    p This is my
+    p content

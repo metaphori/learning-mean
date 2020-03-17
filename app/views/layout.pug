@@ -3,5 +3,34 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/fontawesome.min.css')
   body
-    block content
+    //- start with a fixed navigation bar
+    nav.navbar.fixed-top.navbar-expand-md
+      .container
+        a.navbar-brand(href='/') Loc8r
+          button.navbar-toggler(
+            type='button',
+            data-toggle='collapse',
+            data-target='#navbarMain'
+          )
+            span.navbar-toggler-icon
+          #navbarMain.navbar-collapse.collapse
+        ul.navbar-nav.mr-auto
+          li.nav-item
+            a.nav-link(href='/about/') About
+
+    .container.content
+      block content
+
+    footer.footer
+      //- container vs. container-fluid (take full)
+      .container-fluid
+        .row
+          .col-12
+            small &copy; Getting MEAN
+
+    script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', crossorigin='anonymous')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', crossorigin='anonymous')
+    script(src='/javascripts/bootstrap.min.js')
