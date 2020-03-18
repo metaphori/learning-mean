@@ -3,7 +3,7 @@
     <div class="card text-white bg-primary border-secondary">
       <div class="card-body">
         <h4 class="card-title">{{data.title | uppercase}}</h4>
-        <p class="card-text">{{data.content}}</p>
+        <p class="card-text">{{data.content}} {{data.content | myp}}</p>
         <span class="card-text" *ngFor="let x of data.elements">{{x}}; </span>
         <span class="card-text">{{ 12.3485 | currency:'EUR':true }}</span>
       </div>

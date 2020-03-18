@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { MyComponentComponent } from './my-component/my-component.component';
 import { MypPipe } from './myp.pipe';
+import { HttpClientModule } from '@angular/common/http' ;
 
 @NgModule({
   declarations: [
@@ -12,7 +13,7 @@ import { MypPipe } from './myp.pipe';
     MypPipe
   ],
   imports: [
-    BrowserModule
+    BrowserModule, HttpClientModule
   ],
   providers: [],
   bootstrap: [MyComponentComponent] //[AppComponent]
