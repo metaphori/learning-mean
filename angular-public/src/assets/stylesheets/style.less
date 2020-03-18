@@ -1,0 +1,33 @@
+@colorIndex: #ababab;
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#indexContentContainer .row {
+  background-color: @colorIndex;
+  .col-sm { border:1px solid #000; }
+}
+
+nav {
+  background-color: #58a;
+
+  a.navbar-brand, a.nav-link { color: #bbb; text-decoration: none; font-weight: bold; }
+  a:hover { color: #fff; }
+}
+
+.content {
+  margin-top: 10px; background-color: #ededed;
+  overflow: auto;
+  // p { margin-bottom:0px; }
+}
+
+.footer {
+  background-color: #565656; color: #ddd;
+  .container {  background-color: #777; padding: 10px; }
+  .container-fluid {  background-color: #777; padding: 10px; }
+}
