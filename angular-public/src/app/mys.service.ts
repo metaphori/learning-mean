@@ -14,7 +14,7 @@ export class MysService {
   public getData(): Promise<MyComponentData> {
     var url = 'http://localhost:3000/api/posts/4';
     return this.http.get(url).toPromise()
-      .then(res => {
+      .then((res:any) => {
         console.log(res);
         return {
           title: res.title,

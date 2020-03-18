@@ -1,4 +1,8 @@
 extends layout
+block scripts
+  script(src='/build/runtime-es2015.js')
+  script(src='/build/polyfills-es2015.js')
+  script(src='/build/main-es2015.js')
 block content
   h1= title
   p Welcome to #{title}.
@@ -41,3 +45,5 @@ block content
   +m
     p This is my
     p content
+  hr
+  app-my-component
